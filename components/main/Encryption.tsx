@@ -8,16 +8,22 @@ import Image from "next/image";
 const Encryption = () => {
     return (
         <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
-            <div className="absolute w-auto h-auto top-0 z-[5]">
-                <motion.div
-                    variants={slideInFromTop()}
-                    className="text-[40px] font-medium text-center text-gray-200"
-                >
-                    Performance
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"> & </span>
-                    Security
-                </motion.div>
-            </div>
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+            >
+                <div className="absolute w-auto h-auto top-0 z-[5]">
+                    <motion.div
+                        variants={slideInFromTop()}
+                        className="text-[40px] font-medium text-center text-gray-200"
+                    >
+                        Performance
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"> & </span>
+                        Security
+                    </motion.div>
+                </div>
+            </motion.div>
 
             <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
                 <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">

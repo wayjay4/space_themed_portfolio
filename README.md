@@ -40,4 +40,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ````
 npm install --save-dev framer-motion three react-intersection-observer @react-three/drei @react-three/fiber
 npm install @heroicons/react
+npm install react-icons
 ````
