@@ -2,20 +2,26 @@
 
 import React from 'react';
 import {motion} from "framer-motion";
-import {slideInFromTop} from "@/utils/motion";
+import {slideInFromRight, slideInFromTop} from "@/utils/motion";
 import Image from "next/image";
+import {useInView} from "react-intersection-observer";
 
 const Encryption = () => {
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+    })
+
     return (
-        <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
+        <div className="flex flex-row relative items-center justify-center min-h-[450px] w-full h-full">
             <motion.div
+                ref={ref}
+                animate={inView ? "visible" : "hidden"}
                 initial="hidden"
-                animate="visible"
                 className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
             >
                 <div className="absolute w-auto h-auto top-0 z-[5]">
                     <motion.div
-                        variants={slideInFromTop()}
+                        variants={slideInFromRight(0.1)}
                         className="text-[40px] font-medium text-center text-gray-200"
                     >
                         Performance
@@ -49,8 +55,8 @@ const Encryption = () => {
                 </div>
             </div>
 
-            <div className="absolute z-[20] bottom-[10px] px-[5px]">
-                <div className="cursive text-[20px] font-medium text-center text-gray-300">
+            <div className="absolute z-[20] bottom-[80px] px-[5px]">
+                <div className="cursive text-[30px] font-medium text-center text-gray-300">
                     Secure your data with end-to-end encryption
                 </div>
             </div>

@@ -42,3 +42,5 @@ npm install --save-dev framer-motion three react-intersection-observer @react-th
 npm install @heroicons/react
 npm install react-icons
 ````
+
+Project from: https://www.youtube.com/watch?v=0siQoaXMmzk&list=PLNRF4i868-JU2FVP5713TfGgW3JvghJo3&index=7
